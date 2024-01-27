@@ -23,7 +23,9 @@ setPeople(response.data)
     <div>
       <header className="nav">
         <h1>Blue Whales</h1>
-        <button className="btn" onClick={getUsers}>Get User List</button>
+        <button className="btn" onClick={getUsers}>
+          Get User List
+        </button>
       </header>
       <table>
         <thead>
@@ -35,25 +37,26 @@ setPeople(response.data)
           </tr>
         </thead>
         <tbody>
-          {people.length===0? ("No data found to display"): 
-           
-              people.map((person,idx)=>{
-                return (
-                  <tr key={idx}>
-                    <td>{person.first_name}</td>
-                    <td>{person.last_name}</td>
-                    <td>{person.email}</td>
-                    <td><img src={person.avatar}></img></td>
-                  </tr>
-                );
-              })
-            
-          
-         
-          
-          
-          
-          }
+          {people.length === 0 ? (
+            <tr>
+              <td>
+                <b>No data found to display.</b>
+              </td>
+            </tr>
+          ) : (
+            people.map((person, idx) => {
+              return (
+                <tr key={idx}>
+                  <td>{person.first_name}</td>
+                  <td>{person.last_name}</td>
+                  <td>{person.email}</td>
+                  <td>
+                    <img src={person.avatar}></img>
+                  </td>
+                </tr>
+              );
+            })
+          )}
         </tbody>
       </table>
     </div>
