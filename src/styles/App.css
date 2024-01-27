@@ -1,1 +1,30 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
 
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:1rem,0;
+    padding:0,2rem;
+}
+.btn{
+    background-color:blue;
+    color:white;
+}
+
+table{
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+th{
+    background-color: black;
+    color :white;
+    border:none;
+    font-weight: bold;
+}
